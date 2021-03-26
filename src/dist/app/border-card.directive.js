@@ -13,11 +13,15 @@ var core_1 = require("@angular/core");
 var BorderCardDirective = /** @class */ (function () {
     function BorderCardDirective(el) {
         this.el = el;
-        this.setBorder('#f5f5f5');
-        this.setHeight(180);
+        this.initialColor = '#f5f5f5';
+        this.defaultColor = '#009688';
+        this.defaultHeiht = 180;
+        this.setBorder(this.initialColor);
+        this.setHeight(this.defaultHeiht);
     }
+    //@Input ('pkmnBorderCard') borderColor: string;  sans aliave
     BorderCardDirective.prototype.onMouseEnter = function () {
-        this.setBorder('#009688');
+        this.setBorder(this.borderColor || '#009688');
     };
     BorderCardDirective.prototype.onMouseLeave = function () {
         this.setBorder('#f5f5f5');
@@ -29,6 +33,10 @@ var BorderCardDirective = /** @class */ (function () {
     BorderCardDirective.prototype.setHeight = function (height) {
         this.el.nativeElement.style.height = height + 'px';
     };
+    __decorate([
+        core_1.Input('pkmnBorderCard'),
+        __metadata("design:type", String)
+    ], BorderCardDirective.prototype, "borderColor", void 0);
     __decorate([
         core_1.HostListener('mouseenter'),
         __metadata("design:type", Function),
