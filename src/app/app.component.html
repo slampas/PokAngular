@@ -3,3 +3,7 @@
 
 
     <p *ngIf="age > 18"> Ce message est destiné aux plus de 18 ans</p>
+
+    <ul>
+        <li *ngFor="let pokemon of pokemons">{{ pokemon.name}}</li>
+    </ul>

@@ -10,11 +10,11 @@ import { POKEMONS} from './mock-pokemons';
 })
 export class AppComponent implements OnInit  {
     ngOnInit(): void {
-        this.pokemon = POKEMONS;
+        this.pokemons = POKEMONS;
     } 
     
     
-    private pokemon : Pokemon[];
+    private pokemons : Pokemon[];
     private title: string = "Liste des pokémons";
      age = 20 ;
 

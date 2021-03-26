@@ -14,7 +14,7 @@ var AppComponent = /** @class */ (function () {
         this.age = 20;
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.pokemon = mock_pokemons_1.POKEMONS;
+        this.pokemons = mock_pokemons_1.POKEMONS;
     };
     AppComponent.prototype.selectPokemon = function (pokemon) {
         alert("vous avez cliqué sur : " + pokemon.name);
