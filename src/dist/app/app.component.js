@@ -10,15 +10,25 @@ var core_1 = require("@angular/core");
 var mock_pokemons_1 = require("./mock-pokemons");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.name = 'Angular';
+        this.title = "Liste des pokémons";
+        this.value = '';
     }
     AppComponent.prototype.ngOnInit = function () {
         this.pokemon = mock_pokemons_1.POKEMONS;
     };
+    AppComponent.prototype.selectPokemon = function (pokemon) {
+        alert("vous avez cliqué sur : " + pokemon.name);
+    };
+    AppComponent.prototype.onClick = function () {
+        console.log("ce bouton a été cliqué");
+    };
+    AppComponent.prototype.oneKey = function (value) {
+        this.value = 'bonjour  ' + value;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'pokemon-app',
-            template: "<h1>Hello {{name}}</h1>",
+            templateUrl: "./app/app.component.html"
         })
     ], AppComponent);
     return AppComponent;
