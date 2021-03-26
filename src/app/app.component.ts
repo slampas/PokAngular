@@ -16,7 +16,7 @@ export class AppComponent implements OnInit  {
     
     private pokemons : Pokemon[];
     private title: string = "Liste des pokémons";
-     age = 20 ;
+    
 
     selectPokemon(pokemon: Pokemon){
       alert ("vous avez cliqué sur : "+ pokemon.name)
