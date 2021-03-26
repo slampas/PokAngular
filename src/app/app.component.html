@@ -1,21 +1,2 @@
 
     <h1>{{ title }}</h1>
-    <ul>
-        <li>amir</li>
-        <li>amir</li>
-        <li>amir</li>
-    </ul>
-
-    <button (click)="onClick()">Cliquer ici</button>
-    
-    
-    <input #box  (keyup) = "oneKey(box.value)" >
-    <p> {{ box.value }}</p>
-    <p>+ le bonjour: {{ value }}</p>
-
-    
-    <input #boxe2 (keyup.enter) = "values=boxe2.value" >
-    <p>appuyer sur enter :{{ values }}</p>
-
-    <input #boxe3 (keyup.enter) = "values=boxe3.value" (blur) = "values=boxe3.value" >
-    <p>appuyer sur enter avec focus :{{ values }}</p>
