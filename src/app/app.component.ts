@@ -22,11 +22,4 @@ export class AppComponent implements OnInit  {
       alert ("vous avez cliqué sur : "+ pokemon.name)
     }
 
-    onClick(){
-      console.log("ce bouton a été cliqué");
-    }
-    oneKey(value: string) {
-      this.value =  'bonjour  ' + value;
-    }
-
 }
